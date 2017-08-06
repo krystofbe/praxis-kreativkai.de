@@ -1,0 +1,48 @@
+// Styling for the contact section
+section#kontakt {
+    .section-heading {
+        padding-top: 5rem;
+    }
+    .form-group {
+        margin-bottom: 5px;
+        input,
+        textarea {
+            padding: 10px;
+        }
+        input.form-control {
+            height: auto;
+        }
+        textarea.form-control {
+            height: 236px;
+        }
+    }
+    h4 {
+        padding-top: 4rem;
+        padding-bottom: 1.5rem;
+    }
+    .form-control:focus {
+        border-color: $theme-primary;
+        box-shadow: none;
+    }
+     ::-webkit-input-placeholder {
+        color: $gray-darker;
+        @include heading-font;
+    }
+     :-moz-placeholder {
+        color: $gray-darker;
+        /* Firefox 18- */
+        @include heading-font;
+    }
+     ::-moz-placeholder {
+        color: $gray-darker;
+        /* Firefox 19+ */
+        @include heading-font;
+    }
+     :-ms-input-placeholder {
+        color: $gray-darker;
+        @include heading-font;
+    }
+    .text-danger {
+        color: $theme-danger;
+    }
+}
