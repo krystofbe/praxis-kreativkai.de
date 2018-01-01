@@ -87,6 +87,10 @@ gulp.task("copy", function() {
     gulp
         .src(["node_modules/jquery.easing/*.js"])
         .pipe(gulp.dest("vendor/jquery-easing"));
+    gulp
+        .src(["node_modules/slick-carousel/slick/**"
+    ])
+        .pipe(gulp.dest("vendor/slick"));
 
     gulp
         .src([
@@ -140,6 +144,7 @@ gulp.task('deploy', function() {
     });
 
     var globs = [
+        'vendor/**',
         'src/**',
         'css/**',
         'js/**',
