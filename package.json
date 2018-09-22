@@ -1,7 +1,7 @@
 {
   "title": "Agency",
-  "name": "startbootstrap-agency",
-  "version": "4.0.0-alpha",
+  "name": "praxis-kreativkai",
+  "version": "1.0.0",
   "description": "Agency is a one page HTML theme for Bootstrap.",
   "keywords": [
     "css",
@@ -25,23 +25,44 @@
     "type": "git",
     "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
   },
+  "scripts": {
+    "deploy": "webpack --mode production --config ./webpack.prod.js",
+    "start": "webpack-dev-server --open"
+  },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
-    "font-awesome": "4.7.0",
+    "bootstrap": "^4.1.0",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "jquery.easing": "^1.4.1",
-    "slick-carousel": "^1.7.1",
+    "popper.js": "^1.14.4",
+    "slick-carousel": "^1.8.1",
     "tether": "^1.4.0",
     "vinyl-ftp": "^0.6.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.2.0",
-    "gulp-ftp": "^1.1.0",
-    "gulp-header": "^1.8.8",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.1.2"
+    "@babel/core": "^7.1.0",
+    "babel-loader": "^8.0.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.1.0",
+    "exports-loader": "^0.7.0",
+    "expose-loader": "^0.7.5",
+    "file-loader": "^2.0.0",
+    "image-webpack-loader": "^4.3.1",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-import": "^12.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8",
+    "webpack-merge": "^4.1.4"
   }
 }
