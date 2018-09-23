@@ -1,21 +1,21 @@
 // Global styling for this template
 body {
-    overflow-x: hidden;
-    @include body-font;
+  overflow-x: hidden;
+  @include body-font;
 }
 
 p {
-    line-height: 1.75;
+  line-height: 1.75;
 }
 
 a {
-    color: $theme-primary;
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-        color: darken($theme-primary, 10%);
-    }
+  color: $theme-primary;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: darken($theme-primary, 10%);
+  }
 }
 
 h1,
@@ -24,53 +24,64 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
-    @include heading-font;
+  font-weight: 700;
+  @include heading-font;
 }
 
 section {
-    padding: 20px 0;
-    h2.section-heading {
-        font-size: 40px;
-        margin-top: 0;
-        margin-bottom: 15px;
-    }
-    h3.section-subheading {
-        font-size: 16px;
-        font-weight: 400;
-        font-style: italic;
-        margin-bottom: 75px;
-        text-transform: none;
-        @include serif-font;
-    }
+  padding: 20px 0;
+  h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  h3.section-subheading {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 75px;
+    text-transform: none;
+    @include serif-font;
+  }
 }
 
-@media(min-width:768px) {
-    section {
-        padding-top: 20px;
-        padding-bottom: 80px;
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  section {
+    h2.section-heading {
+      font-size: 30px;
     }
+    h3.section-subheading {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
 }
 
 // Highlight color customization
 ::-moz-selection {
-    background: $theme-primary;
-    text-shadow: none;
+  background: $theme-primary;
+  text-shadow: none;
 }
 
 ::selection {
-    background: $theme-primary;
-    text-shadow: none;
+  background: $theme-primary;
+  text-shadow: none;
 }
 
 img::selection {
-    background: transparent;
+  background: transparent;
 }
 
 img::-moz-selection {
-    background: transparent;
+  background: transparent;
 }
 
 body {
-    -webkit-tap-highlight-color: $theme-primary;
+  -webkit-tap-highlight-color: $theme-primary;
 }

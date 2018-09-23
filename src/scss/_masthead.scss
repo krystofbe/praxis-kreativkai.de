@@ -31,15 +31,16 @@ header.masthead {
       padding-top: 0;
       padding-bottom: 0;
       .intro-lead-in {
-        font-size: 20px;
+        font-size: 26px;
         font-style: italic;
         line-height: 60px;
         margin-bottom: 0px;
         @include serif-font;
         padding-top: 150px;
+        margin-top: 30px;
       }
       .intro-heading {
-        font-size: 10px;
+        font-size: 12px;
         padding-bottom: 10px;
         @include heading-font;
       }

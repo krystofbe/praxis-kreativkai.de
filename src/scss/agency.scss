@@ -1,3 +1,4 @@
+@import "~bootstrap/scss/bootstrap";
 // Core variables and mixins
 @import "variables.scss";
 @import "mixins.scss";
@@ -15,4 +16,3 @@
 @import "footer.scss";
 // Bootstrap Overrides
 @import "bootstrap-overrides.scss";
-@import "~bootstrap/scss/bootstrap";
