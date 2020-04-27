@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -17,14 +17,14 @@ module.exports = {
     "./src/scss/agency.scss",
     "./src/js/agency.js",
     "./src/js/contact_me.js",
-    "./src/js/jqBootstrapValidation.js"
+    "./src/js/jqBootstrapValidation.js",
   ],
   devServer: {
-    contentBase: "./src"
+    contentBase: "./src",
   },
   output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "bundle.js"
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
   },
   devServer: {
     contentBase: "src/", // Relative directory for base of server
@@ -32,39 +32,36 @@ module.exports = {
     inline: true,
     port: process.env.PORT || 3000, // Port Number
     host: "127.0.0.1", // Change to '0.0.0.0' for external facing server
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   plugins: [
-    new CleanWebpackPlugin([path.resolve(__dirname, "build")], {
-      verbose: true,
-      allowExternal: true
-    }),
+    new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
-      "window.jQuery": "jquery"
+      "window.jQuery": "jquery",
     }),
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
-      chunkFilename: "css/[id].css"
+      chunkFilename: "css/[id].css",
     }),
     new CopyWebpackPlugin([
       {
         from: "./src/*.html",
         to: "./",
-        flatten: true
+        flatten: true,
       },
       {
         from: "./src/mail",
         to: "./mail",
-        flatten: true
+        flatten: true,
       },
       {
         from: "./src/img",
-        to: "./img"
-      }
-    ])
+        to: "./img",
+      },
+    ]),
   ],
   module: {
     rules: [
@@ -73,34 +70,34 @@ module.exports = {
         use: [
           {
             loader: "expose-loader",
-            options: "jQuery"
+            options: "jQuery",
           },
           {
             loader: "expose-loader",
-            options: "$"
-          }
-        ]
+            options: "$",
+          },
+        ],
       },
       {
         test: require.resolve("popper.js"),
         use: [
           {
             loader: "expose-loader",
-            options: "Popper"
-          }
-        ]
+            options: "Popper",
+          },
+        ],
       },
       {
         test: /\.js?$/,
         exclude: /node_modules/,
         loader: "babel-loader",
         query: {
-          cacheDirectory: true
-        }
+          cacheDirectory: true,
+        },
       },
       {
         test: /\.(css)$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.s?[ac]ss$/,
@@ -108,8 +105,8 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader",
-          "sass-loader"
-        ]
+          "sass-loader",
+        ],
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -119,30 +116,30 @@ module.exports = {
             options: {
               name: "fonts/[name].[ext]",
               mimetype: "application/font-woff",
-              publicPath: "../"
-            }
-          }
-        ]
+              publicPath: "../",
+            },
+          },
+        ],
       },
 
       {
         test: /\.(jpe?g|png|gif)$/i,
         use: [
-          "file-loader?name=../build/img/[name].[ext]",
-          "image-webpack-loader?bypassOnDebug"
-        ]
+          "file-loader?name=../dist/img/[name].[ext]",
+          "image-webpack-loader?bypassOnDebug",
+        ],
       },
       // font-awesome
       {
         test: /font-awesome\.config\.js/,
-        use: [{ loader: "style-loader" }, { loader: "font-awesome-loader" }]
+        use: [{ loader: "style-loader" }, { loader: "font-awesome-loader" }],
       },
 
       // Bootstrap 4
       {
         test: /bootstrap\/dist\/js\/umd\//,
-        use: "imports-loader?jQuery=jquery"
-      }
-    ]
-  }
+        use: "imports-loader?jQuery=jquery",
+      },
+    ],
+  },
 };

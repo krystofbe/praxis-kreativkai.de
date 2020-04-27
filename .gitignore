@@ -11,12 +11,10 @@ pids
 *.seed
 *.pid.lock
 
-
-build
-
+dist
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
+dist/Release
 
 # Dependency directories
 node_modules/
