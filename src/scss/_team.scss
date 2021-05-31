@@ -1,8 +1,12 @@
 // Styling for the team section
 .team-member {
+  justify-content: space-between;
+  
   margin-bottom: 50px;
   text-align: center;
   width: 100%;
+
+
   img {
     width: 225px;
     height: 225px;
@@ -18,15 +22,12 @@
 }
 
 section#team {
+  .word-wrap-normal {
+    word-wrap: normal;
+  }
   .hovereffect {
-    height: 100%;
-    width: 100%;
-    float: left;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
+
     cursor: pointer;
-    padding-bottom: 25px;
   }
   .hovereffect:hover {
     opacity: 0.8;
