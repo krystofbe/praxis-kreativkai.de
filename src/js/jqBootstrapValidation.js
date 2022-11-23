@@ -1,3 +1,4 @@
+
 /* jqBootstrapValidation
  * A plugin for automating validation on Twitter Bootstrap formatted forms.
  *
@@ -7,7 +8,7 @@
  *
  * http://ReactiveRaven.github.com/jqBootstrapValidation/
  */
-
+import $ from 'jquery';
 (function( $ ){
 
 	var createdElements = [];
@@ -909,4 +910,4 @@
     $(":input").not("[type=image],[type=submit]").jqBootstrapValidation.apply(this,arguments);
   };
 
-})( jQuery );
+})( $ );

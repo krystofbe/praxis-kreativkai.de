@@ -26,47 +26,25 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
   },
   "scripts": {
-    "build": "webpack --mode production --config ./webpack.prod.js",
     "deploy": "node deploy",
-    "start": "webpack-dev-server --open"
+    "build": "/bin/cp src/*.html dist &&  /bin/cp src/fonts/* dist/fonts && /bin/cp -r src/img/* dist/img && /bin/cp src/mail/* dist/mail && esbuild --bundle src/js/bundle.js --outfile=dist/bundle.js --minify && sass -q src/scss/_all.scss dist/css/main.css --style compressed",
+    "dev": "concurrently \"esbuild --bundle src/js/bundle.js --outfile=src/bundle.js --servedir=src\" \"sass -q src/scss/_all.scss src/css/main.css --watch\""
   },
   "dependencies": {
-    "bootstrap": "^4.4.1",
+    "bootstrap": "4.6",
+    "concurrently": "^7.6.0",
     "font-awesome": "^4.7.0",
-    "jquery": "3.4.1",
+    "jquery": "^3.6.1",
     "jquery.easing": "^1.4.1",
-    "popper.js": "^1.16.0",
+    "popper.js": "^1.16.1",
     "slick-carousel": "^1.8.1",
-    "tether": "^1.4.0",
-    "vinyl-ftp": "^0.6.0"
+    "tether": "^2.0.0",
+    "vinyl-ftp": "^0.6.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "babel-loader": "^8.1.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^3.5.3",
-    "cssnano": "^4.1.10",
-    "dotenv": "^8.2.0",
-    "exports-loader": "^0.7.0",
-    "expose-loader": "^0.7.5",
-    "file-loader": "^6.0.0",
-    "ftp-deploy": "^2.3.7",
-    "image-webpack-loader": "^6.0.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.14.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "postcss-cssnext": "^3.1.0",
-    "postcss-flexbugs-fixes": "^4.2.0",
-    "postcss-import": "^12.0.0",
-    "postcss-loader": "^3.0.0",
-    "promise-ftp-common": "^1.1.5",
-    "sass-loader": "^8.0.2",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "url-loader": "^4.1.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2"
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.15.15",
+    "ftp-deploy": "^2.4.3",
+    "yarn-upgrade-all": "^0.7.1"
   }
 }

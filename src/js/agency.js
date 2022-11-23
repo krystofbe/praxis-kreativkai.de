@@ -1,7 +1,9 @@
-(function($) {
-  "use strict"; // Start of use strict
+import $ from 'jquery';
 
-  // Smooth scrolling using jQuery easing
+
+$(document).ready(function(){
+ 
+ // Smooth scrolling using jQuery easing
   $(
     'a[href*="#"]:not([href="#"],[href*="#collapseOne"],[href*="#collapseTwo"],[href*="#carousel"],[href*="#collapseThree"],[href*="#collapseFour"],[href*="#phonePopup"])'
   ).click(function() {
@@ -62,4 +64,5 @@
         '<i class="fa fa-chevron-right" style="position: absolute;top: 50%; right: -25px;"></i>'
     });
   });
-})(jQuery); // End of use strict
+
+});

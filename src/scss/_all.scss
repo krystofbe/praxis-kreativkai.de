@@ -1,0 +1,6 @@
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+$slick-font-path: "../fonts/" !default;
+$slick-loader-path: "/img/" !default;
+@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "./agency.scss";
