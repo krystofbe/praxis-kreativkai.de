@@ -45,6 +45,7 @@
     "dotenv": "^16.0.3",
     "esbuild": "^0.15.15",
     "ftp-deploy": "^2.4.3",
+    "prettier": "^2.8.0",
     "yarn-upgrade-all": "^0.7.1"
   }
 }
