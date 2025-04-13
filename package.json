@@ -26,7 +26,7 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
   },
   "scripts": {
-    "deploy": "node deploy",
+    "deploy": "pnpm run build && node deploy",
     "build": "/bin/cp src/*.html dist &&  /bin/cp src/fonts/* dist/fonts && /bin/cp -r src/img/* dist/img && /bin/cp src/mail/* dist/mail && esbuild --bundle src/js/bundle.js --outfile=dist/bundle.js --minify && sass -q src/scss/_all.scss dist/css/main.css --style compressed",
     "dev": "concurrently \"esbuild --bundle src/js/bundle.js --outfile=src/bundle.js --servedir=src\" \"sass -q src/scss/_all.scss src/css/main.css --watch\""
   },

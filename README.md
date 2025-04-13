@@ -2,8 +2,8 @@
 
 ## Commands
 
-Run `yarn dev` for debugging
+Run `pnpm dev` for debugging
 
-Run `yarn build && yarn deploy` for deploy. Be sure to fill `.env` with ftp username and password
+Run `pnpm run deploy` for building and deploying the project. Be sure to fill `.env` with ftp username and password before running.
 
-Run `python -m http.server -d dist 8008` to verify build
+Run `python -m http.server -d dist 8008` to verify the build locally after running `pnpm run build` or `pnpm run deploy`.
