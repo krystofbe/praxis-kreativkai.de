@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       bootstrap:
-        specifier: '4.6'
-        version: 4.6.2(jquery@3.7.1)(popper.js@1.16.1)
+        specifier: '5.0'
+        version: 5.0.0(@popperjs/core@2.11.8)
       concurrently:
         specifier: ^7.6.0
         version: 7.6.0
@@ -74,6 +74,9 @@ packages:
     resolution: {integrity: sha512-RxSa9VjcDWgWCYsaLdZItdCnJj7p4LxggaEk+Y3MP0dHKoxez8ioG07DVekVbZZqccsrL+oPB/N9AzVPxj4blg==}
     engines: {node: '>=0.8.0'}
 
+  '@popperjs/core@2.11.8':
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
@@ -94,11 +97,10 @@ packages:
   bluebird@2.11.0:
     resolution: {integrity: sha512-UfFSr22dmHPQqPP9XWHRhq+gWnHCYguQGkXQlbyPtW5qTnhFWA8/iXg765tH0cAjy7l/zPJ1aBTO0g5XgA7kvQ==}
 
-  bootstrap@4.6.2:
-    resolution: {integrity: sha512-51Bbp/Uxr9aTuy6ca/8FbFloBUJZLHwnhTcnjIeRn2suQWsWzcuJhGjKDB5eppVte/8oCdOL3VuwxvZDUggwGQ==}
+  bootstrap@5.0.0:
+    resolution: {integrity: sha512-tmhPET9B9qCl8dCofvHeiIhi49iBt0EehmIsziZib65k1erBW1rHhj2s/2JsuQh5Pq+xz2E9bEbzp9B7xHG+VA==}
     peerDependencies:
-      jquery: 1.9.1 - 3
-      popper.js: ^1.16.1
+      '@popperjs/core': ^2.9.2
 
   brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -565,6 +567,8 @@ snapshots:
       readable-stream: 1.1.14
       xregexp: 2.0.0
 
+  '@popperjs/core@2.11.8': {}
+
   ansi-regex@5.0.1: {}
 
   ansi-styles@4.3.0:
@@ -583,10 +587,9 @@ snapshots:
 
   bluebird@2.11.0: {}
 
-  bootstrap@4.6.2(jquery@3.7.1)(popper.js@1.16.1):
+  bootstrap@5.0.0(@popperjs/core@2.11.8):
     dependencies:
-      jquery: 3.7.1
-      popper.js: 1.16.1
+      '@popperjs/core': 2.11.8
 
   brace-expansion@1.1.11:
     dependencies:
