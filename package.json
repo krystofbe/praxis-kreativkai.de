@@ -31,7 +31,7 @@
     "dev": "concurrently \"esbuild --bundle src/js/bundle.js --outfile=src/bundle.js --servedir=src\" \"sass -q src/scss/_all.scss src/css/main.css --watch\""
   },
   "dependencies": {
-    "bootstrap": "4.6",
+    "bootstrap": "5.0",
     "concurrently": "^7.6.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.1",
